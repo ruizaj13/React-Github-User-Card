@@ -1,4 +1,5 @@
 import React from 'react';
+import fetchUser from './services/fetchUser'
 import './App.css';
 
 function App() {
