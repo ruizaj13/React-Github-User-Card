@@ -3,7 +3,7 @@ import axios from 'axios';
 
 function fetchUser() {
     return axios
-        .get(`https://api.github.com/users/wlongmire`)
+        .get(`https://api.github.com/users/wlongmire/followers`)
         .then( res => {
             return(res)
             // console.log(res)
