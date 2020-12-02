@@ -23,6 +23,7 @@ class App extends React.Component {
           this.setState({
             userFollowers: res.data
           })
+          // console.log(res.data)
       })
     }
       
@@ -34,6 +35,17 @@ class App extends React.Component {
         <div>
           <img width='200' src={this.state.gitUser.avatar_url} alt=''/>
           <h2>{this.state.gitUser.name}</h2>
+        </div>
+        <div>
+          {
+            this.state.userFollowers.map( item => (
+              <div>
+                <img width='100' src={item.avatar_url} alt=''/>
+                <h3>{item.login}</h3>
+              </div>
+              )      
+            )
+          }
         </div>
         
       </div>
